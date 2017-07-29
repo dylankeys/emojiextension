@@ -1,0 +1,35 @@
+<html>
+	<head>
+
+		<script type="text/javascript">
+
+			var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+			copyTextareaBtn.addEventListener('click', function(event) 
+			{
+  				var copyTextarea = document.querySelector('.js-copytextarea');
+ 				copyTextarea.select();
+
+ 				try 
+ 				{
+    				var successful = document.execCommand('copy');
+    				var msg = successful ? 'successful' : 'unsuccessful';
+    				console.log('Copying text command was ' + msg);
+  				}
+  				catch (err)
+  				{
+    				console.log('Oops, unable to copy');
+  				}
+			});
+
+		</script>
+
+	</head>
+
+	<body style="background-color:white">
+
+		<p><span class="emoji">&#128514;</span></p>
+		<p><span class="emoji">&#128526;</span></p>
+		
+	</body>
+</html>
